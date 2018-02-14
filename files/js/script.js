@@ -43,7 +43,14 @@
 
 		}
 
-		navigator.mediaDevices.getUserMedia({ video:true }).then(onSuccess);
+		function onError(message) {
+
+			alert(message);
+			
+		}
+
+		// facingMode: { exact: "environment" }
+		navigator.mediaDevices.getUserMedia({ audio:false,video:{ facingMode:'user' }}).then(onSuccess,onError);
 
 	}
 
