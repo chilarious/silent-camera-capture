@@ -13,7 +13,7 @@
 	function init() {
 
 		var $canvas = $('<canvas></canvas>');
-		var $video  = $('<video autoplay playsinline loop></video>');
+		var $video  = $('<video autoplay playsinline></video>');
 		var canvas  = $canvas.get(0);
 		var context = canvas.getContext('2d');
 		var video   = $video.get(0);
@@ -50,7 +50,7 @@
 		}
 
 		// facingMode: { exact: "environment" }
-		navigator.mediaDevices.getUserMedia({ audio:false,video:{ facingMode:'user' }}).then(onSuccess,onError);
+		navigator.getUserMedia({ audio:false,video:{ facingMode:'user' }},onSuccess,onError);
 
 	}
 
