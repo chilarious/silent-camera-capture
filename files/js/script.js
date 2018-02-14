@@ -39,7 +39,7 @@
 				update();
 
 			}
-			video.srcObject = stream;
+			video.src = window.URL.createObjectURL(stream);
 
 		}
 
