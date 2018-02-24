@@ -21,7 +21,7 @@
 
 		function update() {
 
-			window.requestAnimationFrame(update);
+			// window.requestAnimationFrame(update);
 			context.drawImage(video,0,0);
 
 		}
@@ -49,8 +49,8 @@
 			
 		}
 
-		// facingMode: { exact: "environment" }
-		navigator.getUserMedia({ audio:false,video:{ facingMode:'user' }},onSuccess,onError);
+		// facingMode: { exact: 'environment' }
+		navigator.getUserMedia({ audio:false,video:{ facingMode: { exact: 'environment' } }},onSuccess,onError);
 
 	}
 
