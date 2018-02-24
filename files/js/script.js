@@ -33,7 +33,7 @@
 
 		function update() {
 
-			// window.requestAnimationFrame(update);
+			window.requestAnimationFrame(update);
 			context.drawImage(video,0,0);
 
 		}
@@ -62,6 +62,7 @@
 		}
 
 		// facingMode: { exact: 'environment' }
+		// facingMode: 'user'
 		navigator.getUserMedia({ audio:false,video:{ facingMode: { exact: 'environment' } }},onSuccess,onError);
 
 	}
