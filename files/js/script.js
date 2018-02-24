@@ -21,6 +21,7 @@
 		var context = canvas.getContext('2d');
 		var video   = $video.get(0);
 		_$all.append($video).append($canvas).append($button).append($capture);
+		$canvas.hide();
 
 		$button.on('click',onCapture);
 
