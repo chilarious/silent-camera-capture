@@ -12,12 +12,24 @@
 
 	function init() {
 
-		var $canvas = $('<canvas></canvas>');
-		var $video  = $('<video autoplay playsinline></video>');
+		var $canvas  = $('<canvas></canvas>');
+		var $video   = $('<video autoplay playsinline></video>');
+		var $button  = $('<button>capture</button>');
+		var $capture = $('<img>');
+
 		var canvas  = $canvas.get(0);
 		var context = canvas.getContext('2d');
 		var video   = $video.get(0);
-		_$all.append($video).append($canvas);
+		_$all.append($video).append($canvas).append($button).append($capture);
+
+		$button.on('click',onCapture);
+
+		function onCapture() {
+
+			var src = canvas.toDataURL('image/jpeg');
+			$capture.attr('src',src);
+
+		}
 
 		function update() {
 
