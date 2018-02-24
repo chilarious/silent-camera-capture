@@ -28,6 +28,9 @@
 
 			var src = canvas.toDataURL('image/jpeg');
 			$capture.attr('src',src);
+			var time = new Date().getTime();
+			var $anchor = $('<a href="'+src+'" download="' + time + '.jpg"></a>');
+			$anchor.get(0).click();
 
 		}
 
